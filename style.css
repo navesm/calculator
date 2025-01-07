@@ -1,0 +1,209 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #314755, #26a0da);
+}
+
+.calculator {
+    background: white;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+
+}
+
+.calculator-display {
+    background: black;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1 {
+    margin: 0;
+    padding: 25px;
+    font-size: 45px;
+    font-family: 'Lucida Console', sans-serif;
+    font-weight: 100;
+    overflow-x: auto;
+}
+
+/* Buttons */
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+button {
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(211, 211, 211)
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+button:focus {
+    outline: none;
+}
+
+.operator {
+    background: grey;
+    color: white;
+    font-size: 35px;
+}
+
+.clear {
+    background: rgb(255, 37, 37);
+}
+
+.clear:hover {
+    filter: brightness(90%);
+}
+
+.equal-sign {
+    grid-column: -2;
+    grid-row: 2/ span 8;
+    background: rgb(13, 206, 87);
+}
+
+/* Quadratic solver section */
+.quadratic-solver {
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.quadratic-solver h2 {
+    font-family: 'Lucida Console', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.quadratic-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.quadratic-input input {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.quadratic-input button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #26a0da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quadratic-input button:hover {
+    background: #1e8ac4;
+}
+
+.quadratic-output {
+    margin-top: 15px;
+}
+
+.quadratic-output p {
+    font-size: 18px;
+    font-family: 'Lucida Console', sans-serif;
+    word-wrap: break-word;
+}
+
+/* Prime Factorization Section */
+.prime-factorization {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.prime-factorization h2 {
+    font-family: 'Lucida Console', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.prime-factor-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.prime-factor-input input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.prime-factor-input button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #26a0da;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prime-factor-input button:hover {
+    background: #1e8ac4;
+}
+
+.prime-factor-output {
+    margin-top: 15px;
+}
+
+.prime-factor-output p {
+    font-size: 18px;
+    font-family: 'Lucida Console', sans-serif;
+    word-wrap: break-word;
+}
+
+
+/* Media query: Large Smartphone */
+
+@media screen and (max-width: 600px) {
+    .calculator {
+        width: 95%;
+    }
+}

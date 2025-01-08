@@ -204,6 +204,21 @@ button:focus {
 
 @media screen and (max-width: 600px) {
     .calculator {
-        width: 95%;
+        width: 90%;
+    }
+
+    .calculator-buttons {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 8px;
+    }
+
+    button {
+        min-height: 40px;
+        font-size: 18px;
+    }
+
+    .equal-sign {
+        grid-column: span 2;
+        grid-row: auto;
     }
 }

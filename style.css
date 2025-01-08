@@ -15,7 +15,7 @@ body {
 .calculator {
     background: white;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
     padding: 10px;
     border-radius: 12px;
@@ -208,10 +208,11 @@ button:focus {
 @media screen and (max-width: 600px) {
     .calculator {
         width: 90%;
+
     }
 
     .calculator-buttons {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 8px;
     }
 

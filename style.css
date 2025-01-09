@@ -16,11 +16,11 @@ body {
     background: white;
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 15px;
     border-radius: 12px;
     box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
-
+    box-sizing: border-box;
 }
 
 .calculator-display {
@@ -207,22 +207,50 @@ button:focus {
 
 @media screen and (max-width: 600px) {
     .calculator {
-        width: 90%;
-
+        width: 95%;
+        padding: 10px;
+        margin: 10px auto;
     }
 
     .calculator-buttons {
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 8px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+        padding: 5px;
     }
 
     button {
-        min-height: 40px;
-        font-size: 18px;
+        min-height: 35px;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .operator {
+        font-size: 20px;
     }
 
     .equal-sign {
-        grid-column: span 2;
-        grid-row: auto;
+        grid-column: -2;
+        grid-row: -3/ span 3;
+    }
+
+    .calculator-display h1 {
+        font-size: 32px;
+        padding: 15px;
+    }
+}
+
+/* Additional mobile optimization */
+@media screen and (max-width: 350px) {
+    .calculator-buttons {
+        grid-gap: 3px;
+    }
+
+    button {
+        min-height: 30px;
+        font-size: 14px;
+    }
+
+    .operator {
+        font-size: 18px;
     }
 }

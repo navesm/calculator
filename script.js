@@ -132,6 +132,39 @@ function primeFactorize(n) {
   return factors;
 }
 
+//Keyboard input event listeners
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+
+  //Numbers
+  if (/^[0-9]$/.test(key)) {
+    sendNumberValue(key);
+  }
+
+  // Operators
+  switch (key) {
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+      useOperator(key);
+      break;
+    case 'Enter':
+    case '=':
+      useOperator('=');
+      break;
+    case '.':
+      addDecimal();
+      break;
+    case 'Backspace':
+    case 'Delete':
+    case 'c':
+    case 'C':
+      resetAll();
+      break;
+  }
+});
+
 // Add Event Listeners for numbers, operators, decimal buttons
 inputBtns.forEach((inputBtn) => {
   if (inputBtn.classList.length === 0) {
